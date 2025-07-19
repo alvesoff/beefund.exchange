@@ -1,0 +1,223 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1323;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(circle at center, #1a1e35 0%, #0d1323 70%);
+}
+
+.container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container de login */
+.login-container {
+    background-color: #0d1323;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    position: relative;
+    box-shadow: none;
+}
+
+/* Botão de voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo e título */
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Formulário */
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    height: 55px; /* Altura fixa para o grupo, aumentada para corresponder ao input */
+    box-sizing: border-box; /* Garante que padding não afete o tamanho total */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] { /* Adicionado input[type="text"] para quando a senha estiver visível */
+    width: 100%;
+    padding: 15px;
+    padding-right: 45px; /* Espaço para o botão de mostrar/ocultar senha */
+    border: 1px solid #2a2e3f;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    height: 55px; /* Altura aumentada */
+    box-sizing: border-box; /* Garante que padding não afete o tamanho total */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus { /* Adicionado input[type="text"] para quando a senha estiver visível */
+    border-color: #08d4a4;
+    box-shadow: 0 0 5px rgba(8, 212, 164, 0.3);
+    background-color: #ffffff;
+}
+
+/* Estilo para placeholder */
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder { /* Adicionado input[type="text"] para quando a senha estiver visível */
+    color: #777777;
+    opacity: 1;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #555555;
+    cursor: pointer;
+}
+
+/* Lembrar-me e Esqueceu senha */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #08d4a4;
+}
+
+.forgot-password a {
+    color: #6c7293;
+    text-decoration: none;
+}
+
+.forgot-password span {
+    color: #08d4a4;
+}
+
+/* Botão de login */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #08d4a4;
+    color: #0d1323;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.login-button:hover {
+    background-color: #07c094;
+    transform: none;
+    box-shadow: none;
+}
+
+.login-button:active {
+    transform: none;
+    box-shadow: none;
+}
+
+
+
+/* Header e Link de registro */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.register-link a {
+    color: #06a37d; /* Cor mais escura que #08d4a4 */
+    text-decoration: none;
+    font-weight: 700; /* Bold */
+    font-size: 0.9rem; /* Fonte um pouco menor */
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .remember-forgot {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .remember-me {
+        margin-bottom: 10px;
+    }
+}
