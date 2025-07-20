@@ -13,10 +13,8 @@
     { "src": "/api/(.*)", "dest": "server.js" },
     { "src": "/(.*)", "dest": "/$1" }
   ],
-   "env": {
-  "MONGODB_URI": "mongodb+srv://gugu:paz20ver@cluster0.mw8n40e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-  "JWT_SECRET": "beefund_secret_key"
-} "MONGODB_URI": "@mongodb_uri",
-    "JWT_SECRET": "@jwt_secret"
+  "env": {
+    "MONGODB_URI": "mongodb+srv://gugu:paz20ver@cluster0.mw8n40e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "JWT_SECRET": "beefund_secret_key"
   }
 }
